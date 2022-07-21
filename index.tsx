@@ -11,7 +11,7 @@ import {
   EmitterSubscription,
   TextStyle,
 } from "react-native";
-import Clipboard from "@react-native-clipboard/clipboard";
+import Clipboard from "expo-clipboard";
 import styles from "./styles";
 import { isAutoFillSupported } from "./helpers/device";
 import { codeToArray } from "./helpers/codeToArray";
@@ -110,7 +110,7 @@ export default class OTPInputView extends Component<
   checkPinCodeFromClipBoard = () => {
     const { pinCount, onCodeFilled } = this.props;
     const regexp = new RegExp(`^\\d{${pinCount}}$`);
-    Clipboard.getString()
+    Clipboard.getStringAsync()
       .then((code) => {
         if (
           this.hasCheckedClipBoard &&
@@ -131,7 +131,7 @@ export default class OTPInputView extends Component<
         this.clipBoardCode = code;
         this.hasCheckedClipBoard = true;
       })
-      .catch(() => {});
+      .catch(() => { });
   };
 
   private handleChangeText = (index: number, text: string) => {
@@ -236,10 +236,10 @@ export default class OTPInputView extends Component<
           style={
             selectedIndex === index
               ? [
-                  defaultTextFieldStyle,
-                  codeInputFieldStyle,
-                  codeInputHighlightStyle,
-                ]
+                defaultTextFieldStyle,
+                codeInputFieldStyle,
+                codeInputHighlightStyle,
+              ]
               : [defaultTextFieldStyle, codeInputFieldStyle]
           }
           ref={(ref) => {

@@ -1,5 +1,5 @@
 {
-  "name": "@hirbod/react-native-otp-input",
+  "name": "@lewisyann/react-native-otp-input-expo",
   "version": "2.0.5",
   "description": "is a tiny JS library for one time passcode (OTP). Supports smart input suggestion on iOS and code autofill on Android (it will be filled when you press the copy button on the SMS notification bar)",
   "main": "./dist/index.js",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hirbod/react-native-otp-input.git"
+    "url": "git+https://github.com/LewisYann/react-native-otp-input-expo.git"
   },
   "keywords": [
     "react-native",
@@ -46,8 +46,9 @@
     "phone",
     "verification"
   ],
-  "author": "TTT Studio (https://ttt.studio)",
+  "author": "Lewis ALD",
   "contributors": [
+    "Lewis Alledji <lewislewis996@gmail.com> (https://github.com/lewisyann)",
     "Hirbod Mirjavadi (https://github.com/hirbod)",
     "Becky Wu <becky.wu@ttt.studio> (https://github.com/BeckyWu220)",
     "Felipe Peña <felipe@penya.cl> (http://felipe.penya.cl)"
@@ -71,10 +72,10 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@react-native-clipboard/clipboard": "^1.8.5"
+    "expo-clipboard": "^3.0.1"
   },
   "bugs": {
     "url": "https://github.com/hirbod/react-native-otp-input/issues"
   },
-  "homepage": "https://github.com/hirbod/react-native-otp-input#readme"
+  "homepage": "https://github.com/LewisYann/react-native-otp-input-expo#readme"
 }
